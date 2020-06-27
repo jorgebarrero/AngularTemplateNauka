@@ -1,0 +1,67 @@
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav #sidenav [opened]="!onSmallScreen()"
+               [mode]="onSmallScreen() ? 'over' : 'side'" class="app-sidenav">
+
+
+    <mat-toolbar class="app-nav-list">
+      <span class="text-white">Grupo <strong>Nazan</strong></span>
+    </mat-toolbar>
+
+
+    <mat-nav-list dense>
+      <mat-list-item routerLink="#">
+        <mat-icon>dashboard</mat-icon> &nbsp;Inicio
+      </mat-list-item>
+
+
+      <mat-accordion class="example-headers-align">
+        <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+
+          <mat-expansion-panel-header>
+            <mat-icon>check_box</mat-icon> &nbsp;Reportes
+          </mat-expansion-panel-header>
+          <mat-nav-list dense>
+            <a mat-list-item routerLink="#">
+              <mat-icon>attach_money</mat-icon> &nbsp;Movimiento Socios
+            </a>
+            <!-- <a mat-list-item routerLink="#">
+            <mat-icon>notification_important</mat-icon>Notification
+          </a> -->
+          </mat-nav-list>
+
+        </mat-expansion-panel>
+        <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+          <mat-expansion-panel-header>
+            <mat-icon>person</mat-icon> &nbsp;Sistema
+          </mat-expansion-panel-header>
+          <mat-nav-list dense>
+            <a mat-list-item routerLink="#">
+              <mat-icon>person_add</mat-icon> &nbsp; Usuarios
+            </a>
+            <a mat-list-item routerLink="#">
+              <mat-icon>visibility</mat-icon> &nbsp; Configración
+            </a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-nav-list>
+
+
+    <!-- <div class="example-action-buttons">
+      <button mat-button (click)="accordion.openAll()">Expand All</button>
+      <button mat-button (click)="accordion.closeAll()">Collapse All</button>
+    </div> -->
+
+  </mat-sidenav>
+
+
+  <app-toolbar (sidebarClick)="sidenav.toggle()"></app-toolbar>
+
+  <div class="app-sidenav-content">
+
+    <router-outlet></router-outlet>
+  </div>
+
+
+
+</mat-sidenav-container>

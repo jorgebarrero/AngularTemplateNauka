@@ -1,0 +1,62 @@
+.app-sidenav-container {
+  flex: 1;
+  height: 100%;
+  min-height: 100%;
+  position: fixed;
+  width: 100%;
+  min-width: 100%;
+}
+
+.app-sidenav {
+  width: 240px;
+}
+
+.app-sidenav-content {
+  margin: 10px;
+}
+
+.app-nav-list {
+  background: green;
+  color: white;
+}
+
+
+
+mat-nav-list a h3 {
+  color: white;
+}
+
+mat-nav-list a {
+  color: white;
+}
+// .text-white {
+//   color: white;
+// }
+
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 250px;
+  background: green;
+  color: white;
+}
+
+mat-expansion-panel-header {
+  width: 250px;
+  background: green;
+  font-size: 0.8rem;
+  padding-left: 1rem;
+}
+
+mat-expansion-panel {
+  width: 250px;
+  background: green;
+}
+
+main {
+  padding: 10px;
+}
